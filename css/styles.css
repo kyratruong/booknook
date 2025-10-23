@@ -1,0 +1,1579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+#app {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
+
+@font-face {
+  font-family: segoe ui;
+  src: url(segoeui.ttf);
+}
+@font-face {
+  font-family: segoe uib;
+  src: url(segoeuib.ttf);
+}
+.the_nav {
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.the_nav .logo {
+  width: 200px;
+  height: 67px;
+  font-family: segoe ui;
+  font-size: 13px;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+}
+.the_nav .search {
+  width: 479px;
+  height: 35px;
+  background-color: #c4d0d3;
+  border: 1px #707070;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.the_nav .search .magnify-icon {
+  width: 25px;
+  height: 25px;
+  background-color: #c4d0d3;
+}
+.the_nav .search .search-box {
+  height: 35px;
+  width: 440px;
+  background-color: #c4d0d3;
+}
+.the_nav .search .search-box input {
+  width: 440px;
+  height: 35px;
+  border-style: none;
+  background-color: #c4d0d3;
+}
+.the_nav .search .search-box input ::placeholder {
+  font-family: segoe ui;
+  font-size: 12px;
+}
+.the_nav .nav-nav {
+  width: 690px;
+  height: 47px;
+  font-family: segoe ui;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.the_nav .nav-nav nav {
+  width: 710px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.the_nav .nav-nav nav nav a:onclick {
+  font-weight: bolder;
+}
+.the_nav .nav-nav nav .account-nav {
+  height: 45px;
+  width: 117px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.the_nav .nav-nav nav .cart-nav {
+  height: 45px;
+  width: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.the_nav .nav-nav nav a {
+  color: black;
+  text-decoration: none;
+}
+.the_nav .nav-nav nav a:active {
+  font-weight: bolder;
+}
+.the_nav .nav-nav {
+  /* mobile menu toggle styling (hidden on desktop) */
+}
+.the_nav .nav-nav .menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.bottom-border {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+@media all and (max-width: 768px) {
+  .the_nav {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .the_nav .logo p {
+    font-size: 10px;
+  }
+  .the_nav .search {
+    max-width: 379px;
+    width: 100%;
+    margin-right: 15px;
+  }
+  .the_nav .search input {
+    width: 100%;
+    max-width: 379px;
+  }
+  .the_nav .nav-nav {
+    margin-top: 10px;
+    width: 100%;
+    /* hide the nav by default on small screens and show toggle */
+  }
+  .the_nav .nav-nav .menu-toggle {
+    display: flex;
+    top: 30px;
+    right: 30px;
+  }
+  .the_nav .nav-nav nav {
+    width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  .the_nav .nav-nav {
+    /* when open, show the nav as a vertical list */
+  }
+  .the_nav .nav-nav.open nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+  }
+}
+@media all and (width: 390px) {
+  .the_nav .search {
+    max-width: 279px;
+    width: 100%;
+    margin-right: 15px;
+  }
+  .the_nav .search input {
+    width: 100%;
+    max-width: 279px;
+  }
+}
+@font-face {
+  font-family: segoe ui;
+  src: url(segoeui.ttf);
+}
+#home .home-hero {
+  width: 100%;
+  min-height: 560px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+#home .home-hero .hero {
+  width: 1200px;
+  height: 420px;
+  background-image: linear-gradient(rgba(88, 124, 131, 0.7), rgba(88, 124, 131, 0.7)), url("../images/home-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-hero .hero .hero-title {
+  width: 100%;
+  height: 116px;
+}
+#home .home-hero .hero .hero-title .the_title {
+  max-width: 242px;
+  width: 100%;
+  height: 116px;
+  margin-left: 800px;
+}
+#home .home-hero .hero .hero-title .the_title .top-text {
+  width: 100%;
+  height: 40px;
+}
+#home .home-hero .hero .hero-title .the_title .top-text p {
+  font-size: 32px;
+  font-family: segoe ui;
+  font-weight: bolder;
+  color: white;
+}
+#home .home-hero .hero .hero-title .the_title .middle-text {
+  width: 100%;
+  height: 40px;
+}
+#home .home-hero .hero .hero-title .the_title .middle-text p {
+  font-size: 32px;
+  font-family: segoe ui;
+  font-weight: bolder;
+  color: white;
+}
+#home .home-hero .hero .hero-title .the_title .bottom-text {
+  width: 100%;
+  height: 20px;
+  margin-top: 16px;
+}
+#home .home-hero .hero .hero-title .the_title .bottom-text p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+}
+#home .home-content {
+  height: 800px;
+  width: 100% x;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+#home .home-content .TKAM {
+  width: 390px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#home .home-content .TKAM .TKAM-img {
+  width: 306px;
+  height: 491px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/to-kill-a-mockingbird.jpg);
+  margin-bottom: 20px;
+}
+#home .home-content .TKAM .TKAM-info {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+#home .home-content .TKAM .TKAM-info .TKAM-desc {
+  height: 150px;
+  text-align: center;
+}
+#home .home-content .TKAM .TKAM-info .TKAM-desc p {
+  font-family: segoe ui;
+}
+#home .home-content .TKAM .TKAM-info .TKAM-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .TKAM .TKAM-info .TKAM-price p {
+  font-size: 30px;
+  font-family: segoe ui;
+  font-weight: bolder;
+}
+#home .home-content .TKAM .TKAM-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .TKAM .TKAM-btn button {
+  background-color: white;
+  width: 222px;
+  height: 68px;
+}
+#home .home-content .becoming {
+  width: 413px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#home .home-content .becoming .becoming-img {
+  width: 306px;
+  height: 491px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/becoming.jpg);
+  margin-bottom: 20px;
+}
+#home .home-content .becoming .TKAM-info {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+#home .home-content .becoming .TKAM-info .TKAM-desc {
+  height: 150px;
+  text-align: center;
+}
+#home .home-content .becoming .TKAM-info .TKAM-desc p {
+  font-family: segoe ui;
+}
+#home .home-content .becoming .TKAM-info .becoming-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .becoming .TKAM-info .becoming-price p {
+  font-size: 30px;
+  font-family: segoe ui;
+  font-weight: bolder;
+}
+#home .home-content .becoming .TKAM-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .becoming .TKAM-btn button {
+  background-color: white;
+  width: 222px;
+  height: 68px;
+}
+#home .home-content .firestarter {
+  width: 413px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#home .home-content .firestarter .firestarter-img {
+  width: 306px;
+  height: 491px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/firestarter.jpg);
+  margin-bottom: 20px;
+}
+#home .home-content .firestarter .TKAM-info {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+#home .home-content .firestarter .TKAM-info .TKAM-desc {
+  height: 150px;
+  text-align: center;
+}
+#home .home-content .firestarter .TKAM-info .TKAM-desc p {
+  font-family: segoe ui;
+}
+#home .home-content .firestarter .TKAM-info .firestarter-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .firestarter .TKAM-info .firestarter-price p {
+  font-size: 30px;
+  font-family: segoe ui;
+  font-weight: bolder;
+}
+#home .home-content .firestarter .TKAM-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home .home-content .firestarter .TKAM-btn button {
+  background-color: white;
+  width: 222px;
+  height: 68px;
+}
+
+@media all and (max-width: 768px) {
+  #home {
+    height: auto;
+  }
+  #home .home-hero {
+    height: auto;
+  }
+  #home .home-hero .hero {
+    width: 100%;
+    max-width: 552px;
+    height: 329px;
+    background-image: linear-gradient(rgb(88, 124, 131), rgb(88, 124, 131)), url("../images/home-hero.jpg");
+  }
+  #home .home-hero .hero .pic {
+    width: 273px;
+    height: 181px;
+    background-image: url(../images/home-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #home .home-hero .hero .hero-title {
+    margin: 0 auto;
+  }
+  #home .home-hero .hero .hero-title .the_title {
+    margin: 0 auto;
+  }
+  #home .home-hero .hero .hero-title .the_title .bottom-text {
+    margin-top: 8px;
+  }
+  #home .home-content {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #home .home-content .TKAM,
+  #home .home-content .becoming,
+  #home .home-content .firestarter {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}
+@font-face {
+  font-family: segoe ui;
+  src: url(segoeui.ttf);
+}
+.the_footer {
+  width: 100%;
+  height: 67px;
+  background-color: #587c83;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.the_footer .copyright {
+  width: 221px;
+  height: 21px;
+  font-family: segoe ui;
+  font-size: 15px;
+  color: white;
+}
+.the_footer .links {
+  width: 264px;
+  height: 21px;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.the_footer .links a {
+  font-family: segoe ui;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+.the_footer .socials {
+  width: 190px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.the_footer .socials .facebook {
+  width: 41px;
+  height: 41px;
+  background-image: url(../logos/facebook_w.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.the_footer .socials .insta {
+  width: 41px;
+  height: 41px;
+  background-image: url(../logos/instagram_w.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.the_footer .socials .twitter {
+  width: 41px;
+  height: 41px;
+  background-image: url(../logos/twitter_w.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 768px) {
+  .the_footer {
+    font-size: 10px;
+  }
+}
+.about .about-top {
+  max-width: 1200px;
+  width: 100%;
+  height: 630px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-top .about-img-hldr {
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  padding-top: 130px;
+}
+.about .about-top .about-img-hldr .about-img {
+  width: 300px;
+  height: 500px;
+  background-image: url(../images/about-photo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .about-top .about-info {
+  max-width: 880px;
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+  padding-top: 40px;
+}
+.about .about-top .about-info .about-title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about .about-top .about-info .about-title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.about .about-top .about-info .about-origin {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about .about-top .about-info .about-origin p {
+  font-family: segoe ui;
+  font-size: 26px;
+  color: black;
+  font-weight: bolder;
+}
+.about .about-top .about-info .about-desc {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+}
+.about .about-top .about-info .about-desc p {
+  font-family: segoe ui;
+  font-size: 14px;
+  color: black;
+}
+.about .about-bottom {
+  max-width: 1200px;
+  width: 100%;
+  height: 630px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-bottom .about-img-hldr {
+  width: 300px;
+  height: 100%;
+  padding-top: 130px;
+}
+.about .about-bottom .about-img-hldr .about-img-2 {
+  width: 300px;
+  height: 500px;
+  background-image: url(../images/about-photo-two.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .about-bottom .about-info {
+  width: 880px;
+  height: 100%;
+  margin-left: 50px;
+  padding-top: 40px;
+}
+.about .about-bottom .about-info .about-title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about .about-bottom .about-info .about-title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.about .about-bottom .about-info .about-desc {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+}
+.about .about-bottom .about-info .about-desc p {
+  font-family: segoe ui;
+  font-size: 14px;
+  color: black;
+}
+
+.books {
+  width: 100%;
+  height: 2600px;
+  margin-top: 100px;
+}
+.books .row1 {
+  height: 385px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+.books .row1 .title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+.books .row1 .title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.books .row1 .books-list {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.books .row1 .books-list .twilight {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row1 .books-list .twilight .twilight-cover {
+  width: 223px;
+  height: 246px;
+  background-image: url(../images/twilight-box-set.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row1 .books-list .twilight .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row1 .books-list .twilight .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row1 .books-list .twilight .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row1 .books-list .twilight .twilight-info .twilight-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row1 .books-list .twilight .twilight-info .twilight-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row1 .books-list .twilight .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row1 .books-list .harry {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row1 .books-list .harry .harry-cover {
+  width: 224px;
+  height: 256px;
+  background-image: url(../images/hp-box-set.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row1 .books-list .harry .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row1 .books-list .harry .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row1 .books-list .harry .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row1 .books-list .harry .twilight-info .harry-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row1 .books-list .harry .twilight-info .harry-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row1 .books-list .harry .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row1 .books-list .martin {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row1 .books-list .martin .martin-cover {
+  width: 217px;
+  height: 208px;
+  background-image: url(../images/got-box-set.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row1 .books-list .martin .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row1 .books-list .martin .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row1 .books-list .martin .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row1 .books-list .martin .twilight-info .martin-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row1 .books-list .martin .twilight-info .martin-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row1 .books-list .martin .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row2 {
+  height: 385px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+.books .row2 .title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+.books .row2 .title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.books .row2 .books-list {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.books .row2 .books-list .find {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row2 .books-list .find .find-cover {
+  width: 206px;
+  height: 311px;
+  background-image: url(../images/finding\ me.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row2 .books-list .find .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row2 .books-list .find .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row2 .books-list .find .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row2 .books-list .find .twilight-info .find-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row2 .books-list .find .twilight-info .find-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row2 .books-list .find .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row2 .books-list .luther {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row2 .books-list .luther .luther-cover {
+  width: 205px;
+  height: 311px;
+  background-image: url(../images/mlk-biography.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row2 .books-list .luther .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row2 .books-list .luther .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row2 .books-list .luther .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row2 .books-list .luther .twilight-info .luther-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row2 .books-list .luther .twilight-info .luther-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row2 .books-list .luther .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row2 .books-list .roosevelt {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row2 .books-list .roosevelt .roosevelt-cover {
+  width: 208px;
+  height: 313px;
+  background-image: url(../images/elenor-roosevelt-biography.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row2 .books-list .roosevelt .twilight-info {
+  width: 280px;
+  height: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row2 .books-list .roosevelt .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row2 .books-list .roosevelt .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row2 .books-list .roosevelt .twilight-info .roosevelt-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row2 .books-list .roosevelt .twilight-info .roosevelt-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row2 .books-list .roosevelt .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row3 {
+  height: 385px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+.books .row3 .title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+.books .row3 .title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.books .row3 .books-list {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.books .row3 .books-list .misery {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row3 .books-list .misery .misery-cover {
+  width: 206px;
+  height: 311px;
+  background-image: url(../images/misery.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row3 .books-list .misery .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row3 .books-list .misery .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row3 .books-list .misery .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row3 .books-list .misery .twilight-info .misery-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row3 .books-list .misery .twilight-info .misery-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row3 .books-list .misery .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row3 .books-list .frank {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row3 .books-list .frank .frank-cover {
+  width: 205px;
+  height: 311px;
+  background-image: url(../images/frankenstein.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row3 .books-list .frank .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row3 .books-list .frank .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row3 .books-list .frank .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row3 .books-list .frank .twilight-info .frank-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row3 .books-list .frank .twilight-info .frank-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row3 .books-list .frank .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row3 .books-list .phantoms {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row3 .books-list .phantoms .phantoms-cover {
+  width: 208px;
+  height: 313px;
+  background-image: url(../images/phantoms.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row3 .books-list .phantoms .twilight-info {
+  width: 280px;
+  height: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row3 .books-list .phantoms .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row3 .books-list .phantoms .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row3 .books-list .phantoms .twilight-info .phantoms-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row3 .books-list .phantoms .twilight-info .phantoms-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row3 .books-list .phantoms .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row4 {
+  height: 385px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+.books .row4 .title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+}
+.books .row4 .title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  color: black;
+  font-weight: bolder;
+}
+.books .row4 .books-list {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.books .row4 .books-list .winnie {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row4 .books-list .winnie .winnie-cover {
+  width: 200px;
+  height: 276px;
+  background-image: url(../images/winnie\ the\ pooh.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row4 .books-list .winnie .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row4 .books-list .winnie .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row4 .books-list .winnie .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row4 .books-list .winnie .twilight-info .misery-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row4 .books-list .winnie .twilight-info .misery-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row4 .books-list .winnie .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row4 .books-list .cat {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row4 .books-list .cat .cat-cover {
+  width: 199px;
+  height: 275px;
+  background-image: url(../images/frankenstein.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row4 .books-list .cat .twilight-info {
+  width: 280px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row4 .books-list .cat .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row4 .books-list .cat .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row4 .books-list .cat .twilight-info .frank-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row4 .books-list .cat .twilight-info .frank-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row4 .books-list .cat .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.books .row4 .books-list .space {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.books .row4 .books-list .space .space-cover {
+  width: 230px;
+  height: 230px;
+  background-image: url(../images/fun\ facts\ about\ space.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.books .row4 .books-list .space .twilight-info {
+  width: 280px;
+  height: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books .row4 .books-list .space .twilight-info .twilight-desc {
+  width: 100%;
+  height: 105px;
+}
+.books .row4 .books-list .space .twilight-info .twilight-desc p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: black;
+}
+.books .row4 .books-list .space .twilight-info .phantoms-price {
+  width: 100%;
+  height: 21px;
+}
+.books .row4 .books-list .space .twilight-info .phantoms-price p {
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+}
+.books .row4 .books-list .space .book-button button {
+  width: 222px;
+  height: 68px;
+  background-color: white;
+  font-family: segoe ui;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.blog {
+  height: 1639px;
+  width: 1200px;
+  margin-bottom: 100px;
+}
+.blog .blog1 {
+  height: 463px;
+  width: 100%;
+  background-color: #587c83;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 125px;
+}
+.blog .blog1 .blog-cover {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog1 .blog-cover .michelle-cover-img {
+  width: 250px;
+  height: 380px;
+  background-image: url(../images/becoming.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog .blog1 .blog-cover .me-cover-img {
+  width: 246px;
+  height: 372px;
+  background-image: url(../images/finding\ me.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog .blog1 .blog-info {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog1 .blog-info .info {
+  height: 319px;
+  width: 413px;
+  flex-direction: column;
+}
+.blog .blog1 .blog-info .info .blog-title {
+  height: 43px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.blog .blog1 .blog-info .info .blog-title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+.blog .blog1 .blog-info .info .blog-text {
+  height: 153px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog .blog1 .blog-info .info .blog-text p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+}
+.blog .blog1 .blog-info .info .blog-btn {
+  height: 68px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .blog1 .blog-info .info .blog-btn button {
+  width: 222px;
+  height: 68px;
+  background-color: #587c83;
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+  border-color: white;
+}
+.blog .blog2 {
+  height: 463px;
+  width: 100%;
+  background-color: #587c83;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 125px;
+}
+.blog .blog2 .blog-cover {
+  height: 100%;
+  width: 600px;
+  background-image: url(../images/open-book-blog.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog2 .blog-info {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog2 .blog-info .info {
+  height: 319px;
+  width: 413px;
+  flex-direction: column;
+}
+.blog .blog2 .blog-info .info .blog-title {
+  height: 43px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.blog .blog2 .blog-info .info .blog-title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+.blog .blog2 .blog-info .info .blog-text {
+  height: 153px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog .blog2 .blog-info .info .blog-text p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+}
+.blog .blog2 .blog-info .info .blog-btn {
+  height: 68px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .blog2 .blog-info .info .blog-btn button {
+  width: 222px;
+  height: 68px;
+  background-color: #587c83;
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+  border-color: white;
+}
+.blog .blog3 {
+  height: 463px;
+  width: 100%;
+  background-color: #587c83;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 125px;
+}
+.blog .blog3 .blog-cover {
+  height: 100%;
+  width: 600px;
+  background-image: url(../images/ereading-blog.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog3 .blog-info {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blog .blog3 .blog-info .info {
+  height: 319px;
+  width: 413px;
+  flex-direction: column;
+}
+.blog .blog3 .blog-info .info .blog-title {
+  height: 43px;
+  width: 120%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.blog .blog3 .blog-info .info .blog-title p {
+  font-family: segoe ui;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+.blog .blog3 .blog-info .info .blog-text {
+  height: 153px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog .blog3 .blog-info .info .blog-text p {
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+}
+.blog .blog3 .blog-info .info .blog-btn {
+  height: 68px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog .blog3 .blog-info .info .blog-btn button {
+  width: 222px;
+  height: 68px;
+  background-color: #587c83;
+  font-family: segoe ui;
+  font-size: 16px;
+  color: white;
+  border-color: white;
+}

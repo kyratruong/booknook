@@ -1,0 +1,324 @@
+@font-face {
+  font-family: segoe ui;
+  src: url(segoeui.ttf);
+}
+
+#home {
+  .home-hero {
+    width: 100%;
+    min-height: 560px;
+    height: auto;
+    // background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+
+    .hero {
+      width: 1200px;
+      height: 420px;
+      background-image: linear-gradient(
+          rgba(88, 124, 131, 0.7),
+          rgba(88, 124, 131, 0.7)
+        ),
+        url("../images/home-hero.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .hero-title {
+        width: 100%;
+        height: 116px;
+        // background-color: green;
+
+        .the_title {
+          max-width: 242px;
+          width: 100%;
+          height: 116px;
+          // background-color: pink;
+          margin-left: 800px;
+
+          .top-text {
+            width: 100%;
+            height: 40px;
+            // background-color: yellow;
+            p {
+              font-size: 32px;
+              font-family: segoe ui;
+              font-weight: bolder;
+              color: white;
+            }
+          }
+          .middle-text {
+            width: 100%;
+            height: 40px;
+            // background-color: darkmagenta;
+            p {
+              font-size: 32px;
+              font-family: segoe ui;
+              font-weight: bolder;
+              color: white;
+            }
+          }
+          .bottom-text {
+            width: 100%;
+            height: 20px;
+            // background-color: blue;
+            margin-top: 16px;
+            p {
+              font-family: segoe ui;
+              font-size: 16px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-content {
+    height: 800px;
+    width: 100%x;
+    // background-color: paleturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    .TKAM {
+      width: 390px;
+      height: 100%;
+      // background-color: lightsalmon;
+      flex-direction: column;
+      align-items: center;
+
+      .TKAM-img {
+        width: 306px;
+        height: 491px;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/to-kill-a-mockingbird.jpg);
+        margin-bottom: 20px;
+      }
+
+      .TKAM-info {
+        width: 100%;
+        height: 185px;
+        // background-color: bisque;
+        margin-bottom: 20px;
+
+        .TKAM-desc {
+          height: 150px;
+          text-align: center;
+          // background-color: purple;
+
+          p {
+            font-family: segoe ui;
+          }
+        }
+        .TKAM-price {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          p {
+            font-size: 30px;
+            font-family: segoe ui;
+            font-weight: bolder;
+            // background-color: yellowgreen;
+          }
+        }
+      }
+
+      .TKAM-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        button {
+          background-color: white;
+
+          width: 222px;
+          height: 68px;
+        }
+      }
+    }
+
+    .becoming {
+      width: 413px;
+      height: 100%;
+      // background-color: lightsalmon;
+      flex-direction: column;
+      align-items: center;
+
+      .becoming-img {
+        width: 306px;
+        height: 491px;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/becoming.jpg);
+        margin-bottom: 20px;
+      }
+
+      .TKAM-info {
+        width: 100%;
+        height: 185px;
+        // background-color: bisque;
+        margin-bottom: 20px;
+
+        .TKAM-desc {
+          height: 150px;
+          text-align: center;
+          // background-color: purple;
+
+          p {
+            font-family: segoe ui;
+          }
+        }
+        .becoming-price {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          p {
+            font-size: 30px;
+            font-family: segoe ui;
+            font-weight: bolder;
+            // background-color: yellowgreen;
+          }
+        }
+      }
+
+      .TKAM-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        button {
+          background-color: white;
+
+          width: 222px;
+          height: 68px;
+        }
+      }
+    }
+
+    .firestarter {
+      width: 413px;
+      height: 100%;
+      // background-color: lightsalmon;
+      flex-direction: column;
+      align-items: center;
+
+      .firestarter-img {
+        width: 306px;
+        height: 491px;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/firestarter.jpg);
+        margin-bottom: 20px;
+      }
+
+      .TKAM-info {
+        width: 100%;
+        height: 185px;
+        // background-color: bisque;
+        margin-bottom: 20px;
+
+        .TKAM-desc {
+          height: 150px;
+          text-align: center;
+          // background-color: purple;
+
+          p {
+            font-family: segoe ui;
+          }
+        }
+        .firestarter-price {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          p {
+            font-size: 30px;
+            font-family: segoe ui;
+            font-weight: bolder;
+            // background-color: yellowgreen;
+          }
+        }
+      }
+
+      .TKAM-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        button {
+          background-color: white;
+          width: 222px;
+          height: 68px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  #home {
+    height: auto;
+    .home-hero {
+      height: auto;
+      .hero {
+        width: 100%;
+        max-width: 552px;
+        height: 329px;
+
+        background-image: linear-gradient(
+            rgba(88, 124, 131, 1),
+            rgba(88, 124, 131, 1)
+          ),
+          url("../images/home-hero.jpg");
+
+        .pic {
+          width: 273px;
+          height: 181px;
+          background-image: url(../images/home-hero.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .hero-title {
+          margin: 0 auto;
+          .the_title {
+            margin: 0 auto;
+
+            .bottom-text {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .home-content {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .TKAM,
+      .becoming,
+      .firestarter {
+        width: 100%;
+        margin-bottom: 80px;
+      }
+    }
+  }
+}

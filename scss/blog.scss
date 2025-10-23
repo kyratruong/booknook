@@ -1,0 +1,276 @@
+.blog {
+  height: 1639px;
+  width: 1200px;
+  //   background-color: mediumslateblue;
+  margin-bottom: 100px;
+
+  .blog1 {
+    height: 463px;
+    width: 100%;
+    background-color: #587c83;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 125px;
+
+    .blog-cover {
+      height: 100%;
+      width: 600px;
+      //   background-color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .michelle-cover-img {
+        width: 250px;
+        height: 380px;
+        background-image: url(../images/becoming.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .me-cover-img {
+        width: 246px;
+        height: 372px;
+        background-image: url(../images/finding\ me.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .blog-info {
+      height: 100%;
+      width: 600px;
+      //   background-color: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .info {
+        height: 319px;
+        width: 413px;
+        // background-color: lightblue;
+        flex-direction: column;
+
+        .blog-title {
+          height: 43px;
+          width: 100%;
+          //   background-color: lightpink;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+          }
+        }
+        .blog-text {
+          height: 153px;
+          width: 100%;
+          //   background-color: lightgray;
+          text-align: center;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+          }
+        }
+        .blog-btn {
+          height: 68px;
+          width: 100%;
+          //   background-color: lightyellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            width: 222px;
+            height: 68px;
+            background-color: #587c83;
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+            border-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .blog2 {
+    height: 463px;
+    width: 100%;
+    background-color: #587c83;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 125px;
+
+    .blog-cover {
+      height: 100%;
+      width: 600px;
+      background-image: url(../images/open-book-blog.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .blog-info {
+      height: 100%;
+      width: 600px;
+      //   background-color: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .info {
+        height: 319px;
+        width: 413px;
+        // background-color: lightblue;
+        flex-direction: column;
+
+        .blog-title {
+          height: 43px;
+          width: 100%;
+          //   background-color: lightpink;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+          }
+        }
+        .blog-text {
+          height: 153px;
+          width: 100%;
+          //   background-color: lightgray;
+          text-align: center;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+          }
+        }
+        .blog-btn {
+          height: 68px;
+          width: 100%;
+          //   background-color: lightyellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            width: 222px;
+            height: 68px;
+            background-color: #587c83;
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+            border-color: white;
+          }
+        }
+      }
+    }
+  }
+  .blog3 {
+    height: 463px;
+    width: 100%;
+    background-color: #587c83;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 125px;
+
+    .blog-cover {
+      height: 100%;
+      width: 600px;
+      background-image: url(../images/ereading-blog.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .blog-info {
+      height: 100%;
+      width: 600px;
+      //   background-color: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .info {
+        height: 319px;
+        width: 413px;
+        // background-color: lightblue;
+        flex-direction: column;
+
+        .blog-title {
+          height: 43px;
+          width: 120%;
+          //   background-color: lightpink;
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+          }
+        }
+        .blog-text {
+          height: 153px;
+          width: 100%;
+          //   background-color: lightgray;
+          text-align: center;
+          margin-bottom: 30px;
+
+          p {
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+          }
+        }
+        .blog-btn {
+          height: 68px;
+          width: 100%;
+          //   background-color: lightyellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            width: 222px;
+            height: 68px;
+            background-color: #587c83;
+            font-family: segoe ui;
+            font-size: 16px;
+            color: white;
+            border-color: white;
+          }
+        }
+      }
+    }
+  }
+}
